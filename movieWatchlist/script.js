@@ -13,11 +13,9 @@ function search() {
           return results.innerHTML = "<h1 id='errorMSG'>Oops, it seems like that movie doesn't exist</h1>"
         }
         for (let i of data.Search){
-          console.log(i.Title)
           fetch(`https://www.omdbapi.com/?t=${i.Title}&apikey=2197e5bd&plot=short`)
             .then(res => res.json())
             .then(data => {
-              console.log(data)
               results.innerHTML += `
                 <div class="movieComponent flex">
                   <img src=${data.Poster} class="movieIMG" width="100px">
@@ -40,5 +38,4 @@ function addMovie(title) {
   const newSet = new Set(movies)
   const newArray = [...newSet]
   localStorage.setItem("movies", JSON.stringify(newArray))
-  console.log(newArray)
 }
