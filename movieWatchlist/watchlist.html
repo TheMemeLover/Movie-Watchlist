@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body onload="loadMovies()">
+  <div class="background flex">
+    <div class="titleSection watchtitleSection flex">
+        <h1 id="title">My Watchlist</h1>
+        <a id="link" href="index.html">Search for Movies</a>
+    </div>
+  </div>
+  
+  <div class="results flex column addedMovies">
+    <h2 class="startExploring">Your watchlist is looking a little empty...</h2>
+    <a class="addLink" href="index.html"><img class="star" src="img/plus.png">Let’s add some movies!</a>
+  </div>
+  
+  <script src="watchlist.js"></script>
+</body>
+
+</html>
