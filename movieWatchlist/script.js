@@ -39,3 +39,8 @@ function addMovie(title) {
   const newArray = [...newSet]
   localStorage.setItem("movies", JSON.stringify(newArray))
 }
+function handle(event) {
+  event.preventDefault()
+  search()
+  form.reset()
+}
